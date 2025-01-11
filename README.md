@@ -141,24 +141,5 @@ This will start the development server and open the movie application in your de
 
 <br/>
 
-## Contributing
 
-We welcome contributions to movie app! If you have an idea for a new feature, an improvement to an existing feature, or a bug fix, please open an issue to discuss it before submitting a pull request. This helps me to review and understand your changes more efficiently.
 
-To contribute code to movie app project:
-
-1. Fork the repository
-2. Create a new branch for your feature or bug fix
-3. Commit your changes to the new branch
-4. Run the automated tests to ensure that your changes do not break any existing functionality
-5. Open a pull request back to the main repository, including a description of your changes and any relevant issue numbers
-
-Thank you for your contribution to Movie app project! We appreciate your efforts to help make this a great movie application.
-
-<br/>
-
-## Credits
-
-UI/UX design adapted from Tuat Tran Anh's tutorial.
-
-- Tutorial: [Responsive React Movies App With API | ReactJS Movies | ReactJS Tutorial](https://youtu.be/ntYXj9W1Ez8?si=ddwD3FZ6sot_NX9K)
