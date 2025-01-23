@@ -1,3 +1,19 @@
+/**
+ * Custom hook that provides various motion animations for a React component.
+ *
+ * @returns {Object} An object containing the following animation functions:
+ * - `zoomIn`: A function that returns a zoom-in animation configuration.
+ * - `fadeDown`: A memoized object containing the fade-down animation configuration.
+ * - `fadeUp`: A memoized object containing the fade-up animation configuration.
+ * - `staggerContainer`: A function that returns a staggered container animation configuration.
+ * - `slideIn`: A function that returns a slide-in animation configuration.
+ *
+ * @example
+ * const { zoomIn, fadeDown, fadeUp, staggerContainer, slideIn } = useMotion();
+ *
+ * @remarks
+ * The animations are conditionally applied based on the screen size. If the screen width is less than or equal to 768px, some animations may be disabled.
+ */
 import { useCallback, useMemo } from "react";
 import { useMediaQuery } from "usehooks-ts";
 

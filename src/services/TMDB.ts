@@ -2,6 +2,27 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 import { API_KEY, TMDB_API_BASE_URL } from "@/utils/config";
 
+/**
+ * The `tmdbApi` object provides methods to interact with the TMDB (The Movie Database) API.
+ * It includes endpoints to fetch shows and show details.
+ *
+ * @constant
+ * @type {object}
+ * @property {function} getShows - Fetches a list of shows based on the provided parameters.
+ * @property {function} getShow - Fetches detailed information about a specific show.
+ *
+ * @example
+ * // Fetch shows with a search query
+ * const { data, error } = useGetShowsQuery({ category: 'movie', searchQuery: 'Inception', page: 1 });
+ *
+ * @example
+ * // Fetch similar shows
+ * const { data, error } = useGetShowsQuery({ category: 'movie', showSimilarShows: true, id: 123 });
+ *
+ * @example
+ * // Fetch show details
+ * const { data, error } = useGetShowQuery({ category: 'movie', id: 123 });
+ */
 export const tmdbApi = createApi({
   reducerPath: "tmdbApi",
   baseQuery: fetchBaseQuery({ baseUrl: TMDB_API_BASE_URL }),

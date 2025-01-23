@@ -1,15 +1,26 @@
 import React, { useCallback, useContext, useState } from "react";
 import { API_KEY, TMDB_API_BASE_URL } from "@/utils/config";
 
+/**
+ * @typedef {Object} GlobalContext
+ * @property {string} videoId - The ID of the currently selected video.
+ * @property {(prevValue: string) => void} setVideoId - Function to set the video ID.
+ * @property {(id: number | string) => void} getTrailerId - Function to get the trailer ID based on a given ID.
+ * @property {() => void} closeModal - Function to close the modal.
+ * @property {boolean} isModalOpen - Boolean indicating if the modal is open.
+ * @property {boolean} showSidebar - Boolean indicating if the sidebar is shown.
+ * @property {(prevValue: boolean) => void} setShowSidebar - Function to set the visibility of the sidebar.
+ * @property {(value: boolean) => void} setIsModalOpen - Function to set the modal open state.
+ */
 const context = React.createContext({
   videoId: "",
-  setVideoId: (prevValue: string) => { },
-  getTrailerId: (id: number | string) => { },
-  closeModal: () => { },
+  setVideoId: (prevValue: string) => {},
+  getTrailerId: (id: number | string) => {},
+  closeModal: () => {},
   isModalOpen: false,
   showSidebar: false,
-  setShowSidebar: (prevValue: boolean) => { },
-  setIsModalOpen: (value: boolean) => { }
+  setShowSidebar: (prevValue: boolean) => {},
+  setIsModalOpen: (value: boolean) => {},
 });
 
 interface Props {
@@ -24,7 +35,7 @@ const GlobalContextProvider = ({ children }: Props) => {
   const closeModal = useCallback(() => {
     if (!isModalOpen) return;
     setIsModalOpen(false);
-    setVideoId("")
+    setVideoId("");
   }, [isModalOpen]);
 
   const getTrailerId = async (id: number | string) => {
@@ -49,7 +60,7 @@ const GlobalContextProvider = ({ children }: Props) => {
         setVideoId,
         showSidebar,
         setShowSidebar,
-        setIsModalOpen
+        setIsModalOpen,
       }}
     >
       {children}

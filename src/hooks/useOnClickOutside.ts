@@ -1,3 +1,14 @@
+/**
+ * Custom hook to handle click events outside of a specified element.
+ *
+ * @param {Object} params - The parameters for the hook.
+ * @param {() => void} params.action - The action to be executed when a click outside is detected.
+ * @param {boolean} [params.listenCapturing=true] - Whether to use event capturing phase for the click event listener.
+ * @param {boolean} [params.enable=true] - Whether the click outside detection is enabled.
+ *
+ * @returns {Object} - An object containing the ref to be attached to the element.
+ * @returns {React.RefObject<any>} ref - The ref to be attached to the element to detect outside clicks.
+ */
 import { useEffect, useRef } from "react";
 
 interface IUseOutsideClick {
